@@ -4,26 +4,26 @@
 
 **Project Title**: Retail Sales Analysis  
 **Level**: Beginner  
-**Database**: `p1_retail_db`
+**Database**: `retail_db`
 
-This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
+This project demonstrates SQL skills and techniques commonly used by data analysts to explore, clean, and analyze retail sales data. It involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions using SQL queries. This is an ideal project for those beginning their journey in data analysis and looking to build a solid foundation in SQL.
 
 ## Objectives
 
-1. **Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
-2. **Data Cleaning**: Identify and remove any records with missing or null values.
-3. **Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
-4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
+**Set up a retail sales database**: Create and populate a retail sales database using the available dataset.
+**Data Cleaning**: Identify and remove records with missing or null values.
+**Exploratory Data Analysis (EDA)**: Conduct basic exploratory data analysis to better understand the dataset.
+**Business Analysis**: Use SQL queries to answer key business questions and derive insights from the sales data.
 
 ## Project Structure
 
 ### 1. Database Setup
 
-- **Database Creation**: The project starts by creating a database named `p1_retail_db`.
+- **Database Creation**: The project begins by creating a database named `retail_db`.
 - **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
 ```sql
-CREATE DATABASE p1_retail_db;
+CREATE DATABASE retail_db;
 
 CREATE TABLE retail_sales
 (
@@ -43,22 +43,29 @@ CREATE TABLE retail_sales
 
 ### 2. Data Exploration & Cleaning
 
-- **Record Count**: Determine the total number of records in the dataset.
-- **Customer Count**: Find out how many unique customers are in the dataset.
-- **Category Count**: Identify all unique product categories in the dataset.
-- **Null Value Check**: Check for any null values in the dataset and delete records with missing data.
+- **Record Count**: Count the total number of records in the dataset.
+- **Customer Count**: Determine how many unique customers exist in the dataset.
+- **Category Count**: List all unique product categories in the dataset.
+- **Null Value Check**: Identify any null values in the dataset and remove records with missing data.
 
 ```sql
+-- Count the total number of records in the dataset
 SELECT COUNT(*) FROM retail_sales;
+
+-- Count the number of unique customers in the dataset
+
+-- List all unique product categories in the dataset
 SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
 SELECT DISTINCT category FROM retail_sales;
 
+-- Identify records with missing or null values
 SELECT * FROM retail_sales
 WHERE
     sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR
     gender IS NULL OR age IS NULL OR category IS NULL OR
     quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
 
+-- Remove records with missing or null values
 DELETE FROM retail_sales
 WHERE
     sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR
@@ -154,7 +161,7 @@ GROUP BY 1, 2
 WHERE rank = 1
 ```
 
-8. **Write a SQL query to find the top 5 customers based on the highest total sales **:
+8. **Write a SQL query to find the top 5 customers based on the highest total sales**:
 
 ```sql
 SELECT
@@ -212,7 +219,7 @@ GROUP BY shift
 
 ## Conclusion
 
-This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
+This project provides a comprehensive introduction to SQL for data analysts, covering essential topics like database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The insights gained from this analysis can inform key business decisions, such as identifying sales trends, understanding customer behavior, and optimizing product performance. Furthermore, the project lays a solid foundation for more advanced analytics and data-driven strategies in the future.
 
 ## How to Use
 
@@ -223,8 +230,9 @@ This project serves as a comprehensive introduction to SQL for data analysts, co
 
 ## Author - Mubasher Rashid
 
-This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
+This project is a key part of my portfolio, showcasing the SQL skills that are essential for data analyst roles. If you have any questions, feedback, or would like to collaborate on future projects, I’d be happy to connect. Feel free to reach out!
 
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/mubasher-rashid)
+
+- **LinkedIn**: [Connect with me professionally] (https://www.linkedin.com/in/mubasher-rashid)
 
 I look forward to connecting with you!
